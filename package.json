@@ -9,6 +9,7 @@
   "dependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
+    "coffee-script": "^1.12.2",
     "poseidon-mongo": "^0.5.0"
   },
   "devDependencies": {

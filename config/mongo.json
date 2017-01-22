@@ -1,0 +1,4 @@
+{
+  "dev": { "hosts": ["127.0.0.1:27017"], "database": "mongonode", "options": { "w": 1 } },
+  "test": { "hosts": ["127.0.0.1:27017"], "database": "test", "options": { "w": 1 } }
+}
