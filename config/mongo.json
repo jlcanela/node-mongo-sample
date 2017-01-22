@@ -1,4 +1,10 @@
 {
-  "dev": { "hosts": ["127.0.0.1:27017"], "database": "mongonode", "options": { "w": 1 } },
-  "test": { "hosts": ["127.0.0.1:27017"], "database": "mongonode-test", "options": { "w": 1 } }
+  "poseidon": {
+    "dev": { "hosts": ["127.0.0.1:27017"], "database": "mongonode", "options": { "w": 1 } },
+    "test": { "hosts": ["127.0.0.1:27017"], "database": "mongonode-test", "options": { "w": 1 } }
+  },
+  "mondodb-bluebird": {
+    "dev": "mongodb://localhost:27017/mongonode",
+    "test": "mongodb://localhost:27017/mongonode-test"
+  }
 }

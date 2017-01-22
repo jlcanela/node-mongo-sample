@@ -7,11 +7,10 @@
     "test": "test"
   },
   "dependencies": {
-    "chai": "^3.5.0",
-    "chai-as-promised": "^6.0.0",
+    "bluebird": "^3.4.7",
     "co": "^4.6.0",
-    "coffee-script": "^1.12.2",
-    "poseidon-mongo": "^0.5.0"
+    "mongodb": "^2.2.21",
+    "mongodb-bluebird": "^0.1.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",

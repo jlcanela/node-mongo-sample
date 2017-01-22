@@ -6,16 +6,18 @@ const co = require('co');
 
 process.env.NODE_ENV = 'test';
 
-const mongoClient = require('../../src/lib/mongo.js');
+const createDb = require('../../src/lib/mongo.js');
 
 describe('mongo test', function(){
   it('should access to collection', function(){
     return co(function *(){
       const millis = (new Date()).getTime();
-      const coll = yield mongoClient().collection(`test_insert_${millis}`);
+      const db = yield createDb();
+      const coll = db.collection(`test_insert_${millis}`);
       const r = yield coll.insert({a:2});
       const cn = yield coll.count();
       yield coll.drop();
+      yield db.close();
       return cn;
     }).should.eventually.be.eql(1);
   });
