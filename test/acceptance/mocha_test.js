@@ -32,8 +32,7 @@ describe('basic web test', function () {
         return co(function *(){
           driver.get(serverUri);
           (yield driver.getTitle()).should.be.equal('Hello title');
-          const elem = yield driver.findElement(By.css('#title'));
-          const content = yield elem.getText();
+          const content = yield (yield driver.findElement(By.css('#title'))).getText();
           content.should.be.equal('Hello world !');
         });
     });
